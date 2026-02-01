@@ -3,44 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
-  <meta name="description" content="必要なときに、気軽にご連絡ください。" />
+  <title>Contact | Yoga</title>
+  <meta name="description" content="お問い合わせフォーム（ポートフォリオ）。" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
+<a class="skip-link" href="#content">本文へスキップ</a>
+
 <header class="header is-transparent">
   <nav class="nav">
-    <a href="../" class="logo">Yoga</a>
-    <div class="nav-links">
+    <a href="../" class="logo" aria-label="Home">Yoga</a>
+    <div class="nav-links" aria-label="Primary">
       <a href="../about/">About</a>
       <a href="../practice/">Yoga</a>
-      <a href="../contact/">Contact</a>
+      <a href="../contact/" aria-current="page">Contact</a>
     </div>
   </nav>
 </header>
 
-<main class="main page">
-  <section class="text">
-    <h1>Contact</h1>
+<main id="content" class="main page">
+  <section class="section">
+    <div class="prose">
+      <h1 class="section-title">Contact</h1>
 
-    <p>
-      ご質問やご相談があれば、  
-      必要なときに、気軽にご連絡ください。
-    </p>
+      <p>
+        ご質問やご相談があれば、必要なときに気軽にご連絡ください。  
+        今すぐでなくても構いません。思い出したときに、そっと。
+      </p>
 
-    <p>
-      すぐにお返事ができない場合もありますが、  
-      内容を大切に読ませていただきます。
-    </p>
+      <div class="notice">
+        <p class="notice-title">ポートフォリオ用フォーム</p>
+        <p class="notice-text">
+          このフォームは「送信できる形」にしています。実際に受信するには、送信先（Formspree等）の設定が必要です。
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <p>
-      今すぐでなくても構いません。  
-      この場所を思い出したときに、  
-      そっとご連絡いただけたらと思います。
-    </p>
+  <section class="section section-last">
+    <div class="form-card">
+      <form class="form" method="POST" action="https://formspree.io/f/xxxxxxx">
+        <!-- ↑ Formspreeで作成したURLに置き換えてください -->
+
+        <div class="field">
+          <label for="name">お名前</label>
+          <input id="name" name="name" type="text" autocomplete="name" required placeholder="例：山田 花子" />
+        </div>
+
+        <div class="field">
+          <label for="email">メールアドレス</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="example@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="subject">件名</label>
+          <input id="subject" name="subject" type="text" required placeholder="例：レッスンについて" />
+        </div>
+
+        <div class="field">
+          <label for="message">内容</label>
+          <textarea id="message" name="message" rows="7" required placeholder="ご相談内容をお書きください"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">送信する</button>
+          <a class="btn btn-ghost" href="mailto:your-email@example.com?subject=Yoga%20Contact">メールで送る</a>
+        </div>
+
+        <p class="form-hint">
+          ※ 返信にお時間をいただく場合があります。内容は大切に読ませていただきます。
+        </p>
+      </form>
+    </div>
   </section>
 </main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-note">© <span id="year"></span> Yoga.</p>
+  </div>
+</footer>
 
 <script src="../assets/js/main.js"></script>
 </body>

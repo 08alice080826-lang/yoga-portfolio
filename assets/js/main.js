@@ -1,4 +1,4 @@
-// ヒーロー上は透明ヘッダー、スクロールしたら白背景にする
+// Header: transparent on top, solid after scroll
 (function () {
   const header = document.querySelector(".header");
   if (!header) return;
@@ -10,7 +10,10 @@
     header.classList.toggle("is-transparent", !solid);
   };
 
-  // 初期状態
   setHeader();
   window.addEventListener("scroll", setHeader, { passive: true });
+
+  // footer year
+  const yearEl = document.querySelector("#year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();

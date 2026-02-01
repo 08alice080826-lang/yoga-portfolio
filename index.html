@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connecting mind and body through yoga</title>
+  <title>Yoga | Connecting mind and body through yoga</title>
   <meta name="description" content="身体を通して、心と静かに向き合うためのヨガ。" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
+<a class="skip-link" href="#content">本文へスキップ</a>
+
 <header class="header is-transparent">
   <nav class="nav">
-    <a href="./" class="logo">Yoga</a>
-    <div class="nav-links">
+    <a href="./" class="logo" aria-label="Home">Yoga</a>
+    <div class="nav-links" aria-label="Primary">
       <a href="about/">About</a>
       <a href="practice/">Yoga</a>
       <a href="contact/">Contact</a>
@@ -20,41 +22,84 @@
   </nav>
 </header>
 
-<main class="main">
-  <section class="hero">
-    <h1>Connecting mind and body<br>through yoga.</h1>
+<main id="content" class="main">
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">静かに、誠実に。</p>
+      <h1 class="hero-title">Connecting mind and body<br>through yoga.</h1>
+      <p class="hero-lead">
+        何かを足すためではなく、今の身体をそのまま受け取るために。
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="about/">About</a>
+        <a class="btn btn-ghost" href="practice/">Yoga / Practice</a>
+      </div>
+    </div>
   </section>
 
-  <section class="text">
-    <p>
-      ヨガは、何かをできるようになるためのものではなく、  
-      今の身体に起きていることを、そのまま感じる時間だと考えています。
-    </p>
+  <section class="section">
+    <div class="prose">
+      <p>
+        ヨガは、何かをできるようになるためのものではなく、  
+        今の身体に起きていることを、そのまま感じる時間だと考えています。
+      </p>
 
-    <p>
-      呼吸や感覚に注意を向けながら、  
-      身体と心が少しずつ近づいていく。  
-      その過程を、静かに見守るような実践です。
-    </p>
+      <p>
+        呼吸や感覚に注意を向けながら、  
+        身体と心が少しずつ近づいていく。  
+        その過程を、静かに見守るような実践です。
+      </p>
 
-    <p>
-      無理に伸ばさないこと。  
-      形に合わせようとしないこと。  
-      その日の状態を、そのまま受け取ること。
-    </p>
+      <p>
+        無理に伸ばさないこと。  
+        形に合わせようとしないこと。  
+        その日の状態を、そのまま受け取ること。
+      </p>
 
-    <p>
-      ここでは、急ぐ必要はありません。  
-      必要なときに、必要な分だけ、  
-      身体と向き合うための場所であればと思っています。
-    </p>
+      <p>
+        ここでは、急ぐ必要はありません。  
+        必要なときに、必要な分だけ、  
+        身体と向き合うための場所であればと思っています。
+      </p>
+    </div>
   </section>
 
-  <section class="links">
-    <a href="about/">About</a>
-    <a href="practice/">Yoga</a>
+  <section class="section">
+    <h2 class="section-title">This space is for</h2>
+    <div class="cards">
+      <article class="card">
+        <h3 class="card-title">Stillness</h3>
+        <p class="card-text">整えるためよりも、いまの呼吸を確かめるために。</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">Listening</h3>
+        <p class="card-text">身体の声を、言葉にしなくても受け取れるように。</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">Gentleness</h3>
+        <p class="card-text">頑張らないことも、実践の一部として。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-last">
+    <div class="cta">
+      <div class="cta-text">
+        <h2 class="cta-title">必要なときに、必要な分だけ。</h2>
+        <p class="cta-lead">はじめての方も、静かに読めるページ構成にしています。</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn" href="contact/">Contact</a>
+      </div>
+    </div>
   </section>
 </main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-note">© <span id="year"></span> Yoga. All rights reserved.</p>
+  </div>
+</footer>
 
 <script src="assets/js/main.js"></script>
 </body>

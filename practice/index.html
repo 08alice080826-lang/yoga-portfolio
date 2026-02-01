@@ -3,50 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoga / Practice</title>
+  <title>Yoga / Practice | Yoga</title>
   <meta name="description" content="無理をせず、比べず、静かに身体と向き合う実践。" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
+<a class="skip-link" href="#content">本文へスキップ</a>
+
 <header class="header is-transparent">
   <nav class="nav">
-    <a href="../" class="logo">Yoga</a>
-    <div class="nav-links">
+    <a href="../" class="logo" aria-label="Home">Yoga</a>
+    <div class="nav-links" aria-label="Primary">
       <a href="../about/">About</a>
-      <a href="../practice/">Yoga</a>
+      <a href="../practice/" aria-current="page">Yoga</a>
       <a href="../contact/">Contact</a>
     </div>
   </nav>
 </header>
 
-<main class="main page">
+<main id="content" class="main page">
   <section class="sub-hero" style="background-image:url('../images/practice/hero.jpg')">
-    <h1>Yoga / Practice</h1>
+    <div class="sub-hero-inner">
+      <h1>Yoga / Practice</h1>
+      <p>参加を急がせない、落ち着いた実践。</p>
+    </div>
   </section>
 
-  <section class="text">
-    <h2 class="section-title">Yoga / Practice</h2>
+  <section class="section">
+    <div class="prose">
+      <h2 class="section-title">How it feels</h2>
 
-    <p>
-      ここで行っているヨガは、  
-      決まった形を目指すためのものではありません。  
-      呼吸や身体の感覚に注意を向けながら、  
-      その日の状態を確かめていく時間を大切にしています。
-    </p>
+      <p>
+        ここで行っているヨガは、決まった形を目指すためのものではありません。  
+        呼吸や身体の感覚に注意を向けながら、その日の状態を確かめていく時間を大切にしています。
+      </p>
 
-    <p>
-      無理に伸ばしたり、頑張ったりすることはありません。  
-      必要に応じて休むことも、実践の一部だと考えています。
-    </p>
+      <p>
+        無理に伸ばしたり、頑張ったりすることはありません。  
+        必要に応じて休むことも、実践の一部だと考えています。
+      </p>
 
-    <p>
-      ここは、比べたり、急いだりする場所ではありません。  
-      必要なときに、必要な分だけ、  
-      静かに身体と向き合うための場であればと思っています。
-    </p>
+      <p>
+        ここは、比べたり、急いだりする場所ではありません。  
+        必要なときに、必要な分だけ、静かに身体と向き合うための場であればと思っています。
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Notes</h2>
+    <div class="cards cards-2">
+      <article class="card">
+        <h3 class="card-title">無理をしない</h3>
+        <p class="card-text">痛みや違和感があるときは動きを小さく。休むことも大切にします。</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">効果を約束しない</h3>
+        <p class="card-text">何かを「改善する」より、今の感覚を丁寧に扱うことを優先します。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-last">
+    <div class="cta cta-compact">
+      <div class="cta-text">
+        <h2 class="cta-title">必要なときに、連絡してください。</h2>
+        <p class="cta-lead">質問や相談だけでも大丈夫です。</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn" href="../contact/">Contact</a>
+      </div>
+    </div>
   </section>
 </main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-note">© <span id="year"></span> Yoga.</p>
+  </div>
+</footer>
 
 <script src="../assets/js/main.js"></script>
 </body>
