@@ -896,3 +896,135 @@ body.is-menu-open{
     order: initial;
   }
 }
+/* =========================
+   Plan Page
+========================= */
+
+.page-plan .plans{
+  padding: 70px 0 90px;
+  background: #f3f3f1; /* 落ち着いたライトグレー */
+}
+
+.plans__inner{
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.plans__title{
+  letter-spacing: 2px;
+  font-size: 26px;
+  margin: 0 0 10px;
+  color: #2f2f2f;
+}
+
+.plans__lead{
+  margin: 0 0 26px;
+  opacity: .78;
+  line-height: 1.9;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.plans__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.plan-card{
+  position: relative;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 22px 18px 18px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.06);
+}
+
+.plan-card__badge{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.08);
+  color: #2f2f2f;
+}
+
+.plan-card__name{
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+}
+
+.plan-card__price{
+  margin: 0 0 14px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+}
+
+.plan-card__price span{
+  font-size: 12px;
+  opacity: .7;
+  margin-left: 6px;
+}
+
+.plan-card__list{
+  margin: 0 0 16px;
+  padding: 0 0 0 18px;
+  line-height: 1.9;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+.plan-card__cta{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(0,0,0,.06);
+  color: #2f2f2f;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.plan-card__cta:hover{
+  background: rgba(0,0,0,.10);
+}
+
+.plan-notes{
+  margin-top: 26px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 18px 18px;
+}
+
+.plan-notes__title{
+  margin: 0 0 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+}
+
+.plan-notes__list{
+  margin: 0;
+  padding: 0 0 0 18px;
+  line-height: 1.9;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+@media (max-width: 900px){
+  .plans__grid{
+    grid-template-columns: 1fr;
+  }
+}

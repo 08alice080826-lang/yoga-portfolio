@@ -3,41 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Instructor | YOGA</title>
+  <title>Plan | YOGA</title>
 
-  <link rel="stylesheet" href="/yoga-portfolio/assets/css/style.css">
-  <script src="/yoga-portfolio/assets/js/main.js" defer></script>
+  <!-- 既存CSS/JSを利用（相対パス） -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
 </head>
 
-<body>
+<body class="page-plan">
+  <a class="skip-link" href="#content">本文へスキップ</a>
 
-  <main id="content" class="main">
-    <h1 style="padding:120px 18px 20px;text-align:center;letter-spacing:2px;">
-      Instructor
-    </h1>
-    <p style="text-align:center;opacity:.75;padding:0 18px 80px;">
-      このページは後ほど内容を追加します。
-    </p>
+  <!-- header（既存ページに合わせる） -->
+  <header class="header is-transparent">
+    <nav class="nav">
+      <a href="../" class="logo" aria-label="Home">Yoga</a>
+
+      <div class="nav-links" aria-label="Primary">
+        <a href="../about/">About</a>
+        <a href="../practice/">Lesson</a>
+        <a href="../contact/">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===== Hamburger button (top-right) ===== -->
+    <button class="menu-btn" type="button"
+      aria-label="メニューを開く"
+      aria-controls="overlayMenu"
+      aria-expanded="false">
+      <span class="menu-btn__bar"></span>
+      <span class="menu-btn__bar"></span>
+      <span class="menu-btn__bar"></span>
+    </button>
+  </header>
+
+  <main id="content" class="main page">
+    <!-- sub-hero（practiceと同じ雰囲気） -->
+    <section class="sub-hero" style="background-image:url('../images/practice/power.jpeg')">
+      <div class="sub-hero-inner">
+        <h1>PLAN</h1>
+        <p>ライフスタイルに合わせて選べる、やさしい料金プラン</p>
+      </div>
+    </section>
+
+    <!-- Plan cards -->
+    <section class="plans">
+      <div class="plans__inner">
+        <h2 class="plans__title">Plans</h2>
+        <p class="plans__lead">
+          ここは仮の文章です。金額・回数・所要時間・対象などは後ほど差し替えできます。
+        </p>
+
+        <div class="plans__grid">
+
+          <!-- Plan 1 -->
+          <article class="plan-card">
+            <p class="plan-card__badge">おすすめ</p>
+            <h3 class="plan-card__name">Trial</h3>
+            <p class="plan-card__price">¥3,000 <span>/ 60min</span></p>
+            <ul class="plan-card__list">
+              <li>はじめての方向け</li>
+              <li>ゆっくり丁寧に進めます</li>
+              <li>オンライン / 対面（仮）</li>
+            </ul>
+            <a class="plan-card__cta" href="../contact/">お問い合わせ</a>
+          </article>
+
+          <!-- Plan 2 -->
+          <article class="plan-card">
+            <h3 class="plan-card__name">Monthly</h3>
+            <p class="plan-card__price">¥9,800 <span>/ month</span></p>
+            <ul class="plan-card__list">
+              <li>週1ペース（仮）</li>
+              <li>呼吸＋やさしいフロー</li>
+              <li>継続しやすいプラン</li>
+            </ul>
+            <a class="plan-card__cta" href="../contact/">お問い合わせ</a>
+          </article>
+
+          <!-- Plan 3 -->
+          <article class="plan-card">
+            <h3 class="plan-card__name">Private</h3>
+            <p class="plan-card__price">¥8,000 <span>/ 60min</span></p>
+            <ul class="plan-card__list">
+              <li>マンツーマン</li>
+              <li>目的に合わせて調整</li>
+              <li>初心者 / 産前産後（仮）</li>
+            </ul>
+            <a class="plan-card__cta" href="../contact/">お問い合わせ</a>
+          </article>
+
+        </div>
+
+        <!-- Notes -->
+        <div class="plan-notes">
+          <h3 class="plan-notes__title">Notes</h3>
+          <ul class="plan-notes__list">
+            <li>料金・回数・内容は後ほど調整できます（仮）。</li>
+            <li>キャンセルポリシー等もここに追加できます。</li>
+            <li>詳細は Contact からお問い合わせください。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
   </main>
 
-  <!-- ===== Hamburger button ===== -->
-  <button class="menu-btn" type="button"
-    aria-label="メニューを開く"
-    aria-controls="overlayMenu"
-    aria-expanded="false">
-    <span class="menu-btn__bar"></span>
-    <span class="menu-btn__bar"></span>
-    <span class="menu-btn__bar"></span>
-  </button>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">© <span id="year"></span> Yoga.</p>
+    </div>
+  </footer>
 
-  <!-- ===== Overlay Menu ===== -->
+  <!-- ===== Overlay Menu（</body>直前） ===== -->
   <div id="overlayMenu" class="overlay-menu" aria-hidden="true">
     <div class="overlay-menu__header">
       <div class="overlay-menu__logo">YOGA</div>
-      <button class="overlay-menu__close" type="button">×</button>
+      <button class="overlay-menu__close" type="button" aria-label="メニューを閉じる">×</button>
     </div>
 
-    <nav class="overlay-menu__nav">
+    <nav class="overlay-menu__nav" aria-label="サイトメニュー">
       <a class="overlay-menu__link" href="/yoga-portfolio/">Home</a>
       <a class="overlay-menu__link" href="/yoga-portfolio/about/">About</a>
       <a class="overlay-menu__link" href="/yoga-portfolio/instructor/">Instructor</a>
@@ -49,3 +133,4 @@
 
 </body>
 </html>
+
