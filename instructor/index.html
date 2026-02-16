@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instructor | YOGA</title>
+
+  <!-- 既存CSS/JSを利用（相対パス） -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="page-instructor">
+  <a class="skip-link" href="#content">本文へスキップ</a>
+
+  <!-- header（既存ページに合わせる） -->
+  <header class="header is-transparent">
+    <nav class="nav">
+      <a href="../" class="logo" aria-label="Home">Yoga</a>
+
+      <div class="nav-links" aria-label="Primary">
+        <a href="../about/">About</a>
+        <a href="../practice/">Lesson</a>
+        <a href="../contact/">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===== Hamburger button (top-right) ===== -->
+    <button class="menu-btn" type="button"
+      aria-label="メニューを開く"
+      aria-controls="overlayMenu"
+      aria-expanded="false">
+      <span class="menu-btn__bar"></span>
+      <span class="menu-btn__bar"></span>
+      <span class="menu-btn__bar"></span>
+    </button>
+  </header>
+
+  <main id="content" class="main page">
+    <!-- sub-hero（practiceと同じ雰囲気） -->
+    <section class="sub-hero" style="background-image:url('../images/practice/relax.jpg')">
+      <div class="sub-hero-inner">
+        <h1>INSTRUCTOR</h1>
+        <p>あなたのペースに寄り添う、4人のインストラクター</p>
+      </div>
+    </section>
+
+    <!-- instructor list -->
+    <section class="instructors">
+      <div class="instructors__inner">
+
+        <h2 class="instructors__title">Meet the Instructors</h2>
+        <p class="instructors__lead">
+          ここは仮の文章です。後ほど経歴・得意分野・一言メッセージなどを追加できます。
+        </p>
+
+        <div class="instructors__grid">
+          <!-- Card 1 -->
+          <article class="instructor-card">
+            <div class="instructor-card__img">
+              <img src="../images/instructor/instructor-01.jpg" alt="Instructor 01">
+            </div>
+            <div class="instructor-card__body">
+              <p class="instructor-card__num">Instructor 01</p>
+              <h3 class="instructor-card__name">Aya</h3>
+              <p class="instructor-card__text">
+                リラックス系／呼吸を整えるレッスンが得意。初心者の方も安心して参加できます。
+              </p>
+              <ul class="instructor-card__tags">
+                <li>Relax</li>
+                <li>Beginner</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="instructor-card">
+            <div class="instructor-card__img">
+              <img src="../images/instructor/instructor-02.jpg" alt="Instructor 02">
+            </div>
+            <div class="instructor-card__body">
+              <p class="instructor-card__num">Instructor 02</p>
+              <h3 class="instructor-card__name">Mina</h3>
+              <p class="instructor-card__text">
+                体幹・姿勢を整える丁寧なアプローチ。無理なく続けたい方へ。
+              </p>
+              <ul class="instructor-card__tags">
+                <li>Posture</li>
+                <li>Core</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="instructor-card">
+            <div class="instructor-card__img">
+              <img src="../images/instructor/instructor-03.jpg" alt="Instructor 03">
+            </div>
+            <div class="instructor-card__body">
+              <p class="instructor-card__num">Instructor 03</p>
+              <h3 class="instructor-card__name">Yui</h3>
+              <p class="instructor-card__text">
+                忙しい日でも、短い時間で心と体をリセットできるレッスンを大切にしています。
+              </p>
+              <ul class="instructor-card__tags">
+                <li>Short</li>
+                <li>Reset</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="instructor-card">
+            <div class="instructor-card__img">
+              <img src="../images/instructor/instructor-04.jpg" alt="Instructor 04">
+            </div>
+            <div class="instructor-card__body">
+              <p class="instructor-card__num">Instructor 04</p>
+              <h3 class="instructor-card__name">Rina</h3>
+              <p class="instructor-card__text">
+                やさしいストレッチ中心。気持ちが落ち着かない時にも、静かに整える時間を。
+              </p>
+              <ul class="instructor-card__tags">
+                <li>Stretch</li>
+                <li>Calm</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">© <span id="year"></span> Yoga.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Overlay Menu（</body>直前） ===== -->
+  <div id="overlayMenu" class="overlay-menu" aria-hidden="true">
+    <div class="overlay-menu__header">
+      <div class="overlay-menu__logo">YOGA</div>
+      <button class="overlay-menu__close" type="button" aria-label="メニューを閉じる">×</button>
+    </div>
+
+    <nav class="overlay-menu__nav" aria-label="サイトメニュー">
+      <a class="overlay-menu__link" href="/yoga-portfolio/">Home</a>
+      <a class="overlay-menu__link" href="/yoga-portfolio/about/">About</a>
+      <a class="overlay-menu__link" href="/yoga-portfolio/instructor/">Instructor</a>
+      <a class="overlay-menu__link" href="/yoga-portfolio/practice/">Lesson</a>
+      <a class="overlay-menu__link" href="/yoga-portfolio/plan/">Plan</a>
+      <a class="overlay-menu__link" href="/yoga-portfolio/contact/">Contact</a>
+    </nav>
+  </div>
+
+</body>
+</html>
