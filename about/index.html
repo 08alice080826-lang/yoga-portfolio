@@ -20,6 +20,13 @@
       <a href="../contact/">Contact</a>
     </div>
   </nav>
+  <!-- ===== Hamburger button (top-right) ===== -->
+<button class="menu-btn" type="button" aria-label="メニューを開く" aria-controls="overlayMenu" aria-expanded="false">
+  <span class="menu-btn__bar"></span>
+  <span class="menu-btn__bar"></span>
+  <span class="menu-btn__bar"></span>
+</button>
+
 </header>
 
 <main id="content" class="main page">
@@ -74,6 +81,23 @@
     <p class="footer-note">© <span id="year"></span> Yoga.</p>
   </div>
 </footer>
+<!-- ===== Overlay Menu ===== -->
+<div id="overlayMenu" class="overlay-menu" aria-hidden="true">
+  <div class="overlay-menu__header">
+    <div class="overlay-menu__logo">YOGA</div>
+    <button class="overlay-menu__close" type="button" aria-label="メニューを閉じる">×</button>
+  </div>
+
+  <nav class="overlay-menu__nav" aria-label="サイトメニュー">
+    <a class="overlay-menu__link" href="/yoga-portfolio/">Home</a>
+    <a class="overlay-menu__link" href="/yoga-portfolio/about/">About</a>
+    <a class="overlay-menu__link" href="/yoga-portfolio/instructor/">Instructor</a>
+    <a class="overlay-menu__link" href="/yoga-portfolio/practice/">Lesson</a>
+    <a class="overlay-menu__link" href="/yoga-portfolio/plan/">Plan</a>
+    <a class="overlay-menu__link" href="/yoga-portfolio/contact/">Contact</a>
+  </nav>
+</div>
+
 
 <script src="../assets/js/main.js"></script>
 </body>

@@ -134,3 +134,47 @@
     if (e.key === "Escape") closeModal();
   });
 })();
+// =========================
+// Overlay Menu (Hamburger)
+// =========================
+(function () {
+  const menuBtn = document.querySelector(".menu-btn");
+  const overlay = document.getElementById("overlayMenu");
+  const closeBtn = overlay?.querySelector(".overlay-menu__close");
+
+  if (!menuBtn || !overlay || !closeBtn) return;
+
+  const openMenu = () => {
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    menuBtn.setAttribute("aria-expanded", "true");
+    document.body.classList.add("is-menu-open");
+  };
+
+  const closeMenu = () => {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("is-menu-open");
+  };
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+
+  // 背景タップで閉じる（nav以外を押したら閉じる）
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  // リンク押したら閉じる
+  overlay.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", closeMenu);
+  });
+
+  // Escで閉じる
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+      closeMenu();
+    }
+  });
+})();

@@ -577,3 +577,100 @@ body{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* =========================
+   Overlay Menu (Hamburger)
+========================= */
+
+.menu-btn{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 2000;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 10px;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.menu-btn__bar{
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(0,0,0,.75);
+  margin: 3px 0;
+  border-radius: 999px;
+}
+
+/* overlay */
+.overlay-menu{
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(40,40,40,.88);
+  backdrop-filter: blur(6px);
+  display: none;
+}
+
+.overlay-menu.is-open{
+  display: block;
+}
+
+.overlay-menu__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px 10px;
+}
+
+.overlay-menu__logo{
+  color: rgba(255,255,255,.9);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.overlay-menu__close{
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.overlay-menu__nav{
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 60px 18px 40px;
+  display: grid;
+  gap: 18px;
+  text-align: center;
+}
+
+.overlay-menu__link{
+  display: block;
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.overlay-menu__link:hover{
+  background: rgba(255,255,255,.12);
+}
+
+/* body scroll lock */
+body.is-menu-open{
+  overflow: hidden;
+}
